@@ -23,8 +23,6 @@ const generateImage = async (req, res) =>{
             imageSize = "256x256"
     }
 
-
-
     try{
         const response = await openai.createImage({
             prompt,
@@ -35,7 +33,7 @@ const generateImage = async (req, res) =>{
 
         res.status(200).json({
             success: true,
-            data: image_url
+            image: image_url
         })
     }
     catch(error){

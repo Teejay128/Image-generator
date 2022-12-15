@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Booklister</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+            <h1 class="navbar-brand">IMAGEN</h1>
+            </div>
+        </nav>
+        <h3>
+        Image generator
+        <small class="text-muted">powered by OpenAI</small>
+        </h3>
+        <p class="lead">Uses <a href="https://openai.com">OpenAI</a>'s DALL-E generator to generate image based on text prompt</p>
+    
+        <form>
+            <fieldset class="bd-4">
+            <legend>Generate Image</legend>
+            <div class="form-group">
+                <label for="prompt" class="form-label mt-2">Input prompt</label>
+                <textarea class="form-control" id="prompt" rows="2" placeholder="Input a very descriptive prompt to get better results"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="size" class="form-label mt-4">Example select</label>
+                <select class="form-select" id="size">
+                <option value="small">small</option>
+                <option value="medium">medium</option>
+                <option value="large">large</option>
+                </select>
+            </div>
+            </fieldset>
+            <div class="text-center">
+            <button type="button" id="generate" class="btn btn-outline-primary mt-2">Generate</button>
+            </div>
+        </form>
+        <div class="text-center mt-5 mb-10">
+            <img src="" id="image" alt="Generated image goes here" class="img-fluid" width="256" height="256">
+        </div>
+    </div>
+</body>
+</html>
