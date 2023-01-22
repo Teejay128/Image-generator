@@ -40,10 +40,14 @@ async function generateImageRequest(prompt, size){
         }
 
         const data = await response.json();
-        // console.log(data);
+        console.log(data);
         const imageUrl = data.image;
 
-        document.querySelector('#image').src = imageUrl;
+        const image = `
+            <img src="${imageUrl}" id="image" alt="Generated image goes here" class="img-fluid" width="256" height="256">
+        `
+
+        document.querySelector('#img-container').innerHTML = image;
 
 
         document.querySelector('body').style.opacity = 1.0
